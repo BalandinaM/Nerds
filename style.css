@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+    src: local(Roboto),
+         url("../Нердс/fonts/roboto.woff2") format("woff2"),
+         url("../Нердс/fonts/roboto.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: medium;
+    src: local(Roboto),
+         url("../Нердс/fonts/robotomedium.woff2") format("woff2"),
+         url("../Нердс/fonts/robotomedium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: Roboto;
+    font-weight: 700;
+    font-style: bold;
+    src: local(Roboto),
+         url("../Нердс/fonts/robotobold.woff2") format("woff2"),
+         url("../Нердс/fonts/robotobold.woff") format("woff");
+  } 
+
+  :root {
+      --basic-black: #000000;
+      --basic-grey-light: #EEEEEE;
+      --basic-grey-medium: #666666;
+      --basic-grey-text: #283136;
+      --basic-grey-dark: #444444;
+      --basic-white: #FFFFFF;
+      --basic-green: #00CA74;
+      --basic-red: #FB565A;
+      --basic-yellow: #EFC849;
+      --status-red-medium: #E74246;
+      --status-red-dark: #D7373B;
+      --status-green-medium: #00BC6C;
+      --status-green-dark: #00AA62;
+      --status-yellow-medium: #EAB534;
+      --status-yellow-dark: #E5A722;
+      --status-icon: #E1E1E1;
+      --status-input-ease:#D7DCDE;
+      --status-input-hover: #B4B9BB;
+      --status-link-hover: #DFDFDF;
+      --status-link-activ: #D5D5D5;
+      --status-link-focus: #DBDBDB;
+      --status-frame: #4D4D4D;
+  }
+
+  body {
+    min-width: 1440px;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--basic-black);
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  /*Общие стили элементов*/
+
+  .button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--basic-white);
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--basic-grey-text);
+  }
