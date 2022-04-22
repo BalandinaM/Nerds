@@ -2,31 +2,35 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <title>Нёрдс</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
-    <title>Нёрдс</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="index.html"><img src="img/nerds-logo.svg" alt="Лого Нёрдс" width="152" height="65"></a>
-        <ul>
-          <li><a href="blank.html">Студия</a></li>
-          <li><a href="blank.html">Клиенты</a></li>
-          <li><a>Магазин</a></li>
-          <li><a href="blank.html">Контакты</a></li>
+    <header class="header">
+      <nav class="header__nav nav">
+        <a class="nav__logo">
+          <img src="img/nerds-logo.svg" alt="Лого Нёрдс" width="152" height="65">
+        </a>
+        <ul class="nav__list list">
+          <li class="nav__item"><a class="button nav__button" href="#studio">Студия</a></li>
+          <li class="nav__item"><a class="button nav__button" href="#customer">Клиенты</a></li>
+          <li class="nav__item"><a class="button nav__button" href="#">Магазин</a></li>
+          <li class="nav__item"><a class="button nav__button" href="#contacts">Контакты</a></li>
         </ul>
-        <a href="blank.html">Корзина</a>
+        <a class="button nav__button" href="blank.html">Корзина</a>
       </nav>
+      <h1 class="title-catalog">Магазин готовых шаблонов</h1>
     </header>
     <main>
-        <h1>Магазин готовых шаблонов</h1>
-        <section>
+        <section class="filter">
             <h2 class="visually-hidden">Параметры отбора</h2>
             <form action="https://echo.htmlacademy.ru" method="get">
-                <fieldset>
-                    <legend>Стоимость</legend>
+                <fieldset class="filter__range">
+                    <legend class="title">Стоимость</legend>
                     <label for="price">
                         <input type="range" name="price" id="price" min="0">
                     </label>
@@ -38,99 +42,97 @@
                             <input type="text" name="price-max" id="price-max" placeholder="150000">
                         </label>
                 </fieldset>
-                <fieldset>
-                    <legend>Сетка</legend>
+                <fieldset class="filter__radio radio">
+                    <legend class="title">Сетка</legend>
                     <p>
                         <input type="radio" name="grid" id="adapted" checked>
-                        <label class="text" for="adapted">Адаптивная</label>
+                        <label class="text filter__item" for="adapted">Адаптивная</label>
                     </p>
                     <p>
                         <input type="radio" name="grid" id="fix">
-                        <label class="text" for="fix">Фиксированная</label>
+                        <label class="text filter__item" for="fix">Фиксированная</label>
                     </p>
                     <p>
                         <input type="radio" name="grid" id="streth">
-                        <label class="text" for="streth">Резиновая</label>
+                        <label class="text filter__item" for="streth">Резиновая</label>
                     </p>
                 </fieldset>
-                <fieldset>
-                    <legend>Особенности</legend>
+                <fieldset class="filter__checkbox checkbox">
+                    <legend class="title">Особенности</legend>
                     <p>
                         <input type="checkbox" name="slider" id="slider" value="slider" checked>
-                        <label class="text" for="slider">Слайдер</label>
+                        <label class="text filter__item" for="slider">Слайдер</label>
                     </p>
                     <p>
                         <input type="checkbox" name="advantages-blok" id="advantages-blok" value="advantages-blok">
-                        <label class="text" for="advantages-blok">Блок преимуществ</label>
+                        <label class="text filter__item" for="advantages-blok">Блок преимуществ</label>
                     </p>
                     <p>
                         <input type="checkbox" name="news" id="news" value="news" checked>
-                        <label class="text" for="news">Новости</label>
+                        <label class="text filter__item" for="news">Новости</label>
                     </p>
                     <p>
                         <input type="checkbox" name="gallery" id="gallery" value="gallery">
-                        <label class="text" for="gallery">Галерея</label>
+                        <label class="text filter__item" for="gallery">Галерея</label>
                     </p>
                     <p>
                         <input type="checkbox" name="cart" id="cart" value="cart">
-                        <label class="text" for="cart">Корзина</label>
+                        <label class="text filter__item" for="cart">Корзина</label>
                     </p>
                 </fieldset>
-                <button class="button">Показать</button> 
+                <button class="button button_grey">Показать</button> 
             </form>
         </section>
-                    <section>
-                        <h3> Сортировать:</h3>
-                        <button>По цене</button>
-                        <button>По типу</button>
-                        <button>По названию</button>
+                    <section class="sorting">
+                        <h3 class="title"> Сортировать:</h3>
+                        <button class="sorting__button">По цене</button>
+                        <button class="sorting__button">По типу</button>
+                        <button class="sorting__button">По названию</button>
                         <button>Стрелочка вниз</button>
                         <button>Стрелочка вверх</button>
                         <!--Добавить кнонопочки в виде треугольников-->
                     </section>
-               
-       
         <section>
             <h2 class="visually-hidden">Каталог товаров</h2> <!--Скрыть-->
-            <ul>
+            <ul class="list">
                 <li><img src="img/catalog/sedona.png" alt="Информационный сайт для туристов">
                     <div>
-                        <h3>SEDONA</h3>
+                        <h3 class="title">SEDONA</h3>
                         <p class="text">Информационный сайт для туристов</p>
                         <button class="button">9 900 Р</button>
                     </div>
                 </li>
                 <li><img src="img/catalog/pink.png" alt="Продуктовый лендингприложения для iOS и Android">
                     <div>
-                        <h3>Pink app</h3>
+                        <h3 class="title">Pink app</h3>
                         <p class="text">Продуктовый лендинг приложения для iOS и Android</p>
                         <button class="button">9 900 Р</button>
                     </div>
                 </li>
                 <li><img src="img/catalog/barbershop.png" alt="Сайт салона красоты. Для мужчин, да.">
                     <div>
-                        <h3>Barbershop</h3>
+                        <h3 class="title">Barbershop</h3>
                         <p class="text">Сайт салона красоты.Для мужчин, да.</p>
                         <button class="button">9 900 Р</button>
                     </div>
                 </li>
                 <li><img src="img/catalog/mishka.png" alt="Интернет-магазин вязаных игрушек">
                     <div>
-                        <h3>MISHKA</h3>
+                        <h3 class="title">MISHKA</h3>
                         <p class="text">Интернет-магазин вязаных игрушек</p>
                         <button class="button">9 900 Р</button>
                     </div>
                 </li>
                 <li><img src="img/catalog/aplus.png" alt="Лендинг курсов повышения квалификации">
                     <div>
-                        <h3>A Plus</h3>
+                        <h3 class="title">A Plus</h3>
                         <p class="text">Лендинг курсов повышения квалификации</p>
                         <button class="button">9 900 Р</button>
                     </div>
                 </li>
                 <li><img src="img/catalog/kvast.png" alt="Промо-сайт производителя крафтового кваса">
                     <div>
-                        <h3>КВАСТ</h3>
+                        <h3 class="title">КВАСТ</h3>
                         <p class="text">Промо-сайт производителя крафтового кваса</p>
                         <button class="button">9 900 Р</button>
                     </div>
@@ -138,10 +140,10 @@
             </ul>
         </section>
         <div>
-            <a class="button">1</a>
-            <a class="button" href="#">2</a>
-            <a class="button" href="#">3</a>
-            <a class="button" href="#">Следующая</a>
+            <a class="button button_grey">1</a>
+            <a class="button button_grey" href="#">2</a>
+            <a class="button button_grey" href="#">3</a>
+            <a class="button button_grey" href="#">Следующая</a>
         </div>
     </main>
     <footer>
@@ -155,7 +157,7 @@
         <section>
           <h2>Давайте дружить, это выгодно!</h2>
           <p class="text">Скидка 10% для друзей из социальных сетей.</p>
-          <ul>
+          <ul class="list">
             <li><a href="#">Вконтакте</a></li>
             <li><a href="#">Фейсбук</a></li>
             <li><a href="#">Инстаграмм</a></li>
