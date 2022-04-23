@@ -10,7 +10,7 @@
   @font-face {
     font-family: Roboto;
     font-weight: 500;
-    font-style: medium;
+    font-style: normal;
     src: local(Roboto),
          url("../Нердс/fonts/robotomedium.woff2") format("woff2"),
          url("../Нердс/fonts/robotomedium.woff") format("woff");
@@ -19,7 +19,7 @@
   @font-face {
     font-family: Roboto;
     font-weight: 700;
-    font-style: bold;
+    font-style: normal;
     src: local(Roboto),
          url("../Нердс/fonts/robotobold.woff2") format("woff2"),
          url("../Нердс/fonts/robotobold.woff") format("woff");
@@ -381,4 +381,17 @@
 .filter__item {
   font-size: 16px;
   line-height: 20px;
+}
+
+.catalog-list__item {
+  background-color: var(--basic-grey-light);
+}
+
+.item__popup .text {
+  line-height: 18px;
+  text-align: center;
+}
+
+.item__popup .title {
+  text-align: center;
 }
